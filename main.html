@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="shortcut icon" href=""/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,500&display=swap"
+          rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #1a1d20;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    h1 {
+        display: block;
+        color: #86b7fe;
+        transition: color 0.3s ease;
+    }
+</style>
+<body> <div class="container">
+<h1 id="hover">HOVER ME</h1></div>
+</body>
+<script>
+    $(document).ready(function () {
+        $("#hover").hover(
+            function () {
+                if ($(this).css("color") === "rgb(134, 183, 254)") {
+                    $(this).css("color", "rgb(255, 0, 255)");
+                } else if ($(this).css("color") === "rgb(255, 0, 255)") {
+                    $(this).css("color", "#20c997");
+                } else {
+                    $(this).css("color", "#86b7fe");
+                }
+            }
+        );
+    });
+</script>
+</html>
